@@ -1,0 +1,20 @@
+{
+    "name": "otavio/aluraplay",
+    "description": "Projeto do curso 'PHP na Web lidando com segurança e API' da Alura",
+    "autoload": {
+        "psr-4": {
+            "Alura\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Otavio Henrique de Lima e Silva",
+            "email": "otaviohlsilva@gmail.com"
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "dumpautoload": "composer dumpautoload",
+        "start": "php -S localhost:8080 -t public/"
+    }
+}
