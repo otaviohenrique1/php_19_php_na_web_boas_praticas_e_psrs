@@ -4,9 +4,13 @@ namespace Alura\Mvc\Helper;
 
 trait HtmlRendererTrait
 {
-  private function addErrorMessage(string $errorMessage): void
+  private function renderTemplate(string $templateName, array $context = []): string
   {
-    $_SESSION['error_message'] = $errorMessage;
+    $templatePath = __DIR__ ."/../../views/";
+    extract($context);
+    ob_start();
+    require_once $templatePath . $templateName . '.php';
+    return ob_get_clean();
   }
 }
 

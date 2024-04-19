@@ -10,3 +10,4 @@ Projeto do curso "PHP na Web: aplicando boas práticas e PSRs" da Alura
 
 php -S localhost:8080
 php -S localhost:8080 -t public/
+composer dumpautoload

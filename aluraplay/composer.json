@@ -12,9 +12,11 @@
             "email": "otaviohlsilva@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "psr/http-message": "^2.0"
+    },
     "scripts": {
-        "dumpautoload": "composer dumpautoload",
+        "autoloaddump": "composer dumpautoload",
         "start": "php -S localhost:8080 -t public/"
     }
 }
