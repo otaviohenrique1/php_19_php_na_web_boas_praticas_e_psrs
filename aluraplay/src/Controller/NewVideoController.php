@@ -11,8 +11,9 @@ use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\UploadedFileInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
-class NewVideoController implements Controller
+class NewVideoController implements RequestHandlerInterface
 {
     use FlashMessageTrait;
 
@@ -20,7 +21,7 @@ class NewVideoController implements Controller
     {
     }
 
-    public function processaRequisicao(ServerRequestInterface $request): ResponseInterface
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $queryParams = $request->getQueryParams();
 

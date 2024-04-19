@@ -10,8 +10,9 @@ use Alura\Mvc\Repository\VideoRepository;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
-class EditVideoController implements Controller
+class EditVideoController implements RequestHandlerInterface
 {
     use FlashMessageTrait;
 
@@ -19,7 +20,7 @@ class EditVideoController implements Controller
     {
     }
 
-    public function processaRequisicao(ServerRequestInterface $request): ResponseInterface
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $queryParams = $request->getQueryParams();
 
