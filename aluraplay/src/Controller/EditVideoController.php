@@ -22,9 +22,7 @@ class EditVideoController implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        $queryParams = $request->getQueryParams();
-
-        $id = filter_var($queryParams['id'], FILTER_VALIDATE_INT);
+        $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
         if ($id === false || $id === null) {
             $this->addErrorMessage('ID inválido');
             return new Response(302, [
@@ -32,14 +30,14 @@ class EditVideoController implements RequestHandlerInterface
             ]);
         }
 
-        $url = filter_var($queryParams['url'], FILTER_VALIDATE_URL);
+        $url = filter_input(INPUT_POST, 'url', FILTER_VALIDATE_URL);
         if ($url === false) {
             $this->addErrorMessage('URL inválida');
             return new Response(302, [
                 'Location' => '/',
             ]);
         }
-        $titulo = filter_var($queryParams['titulo']);
+        $titulo = filter_input(INPUT_POST, 'titulo');
         if ($titulo === false) {
             $this->addErrorMessage('Título inválido');
             return new Response(302, [

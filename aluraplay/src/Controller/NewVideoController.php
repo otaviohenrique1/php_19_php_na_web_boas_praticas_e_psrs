@@ -23,16 +23,14 @@ class NewVideoController implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        $queryParams = $request->getQueryParams();
-
-        $url = filter_var($queryParams['url'], FILTER_VALIDATE_URL);
+        $url = filter_input(INPUT_POST, 'url', FILTER_VALIDATE_URL);
         if ($url === false) {
             $this->addErrorMessage("URL inválida");
             return new Response(302, [
                 'Location' => '/novo-video',
             ]);
         }
-        $titulo = filter_var($queryParams['titulo']);
+        $titulo = filter_input(INPUT_POST, 'titulo');
         if ($titulo === false) {
             $this->addErrorMessage("Título não informado");
             return new Response(302, [

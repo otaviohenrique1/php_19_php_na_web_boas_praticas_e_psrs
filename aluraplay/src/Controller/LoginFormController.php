@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Alura\Mvc\Controller;
 
-use Alura\Mvc\Helper\HtmlRendererTrait;
+// use Alura\Mvc\Helper\HtmlRendererTrait;
 use League\Plates\Engine;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
@@ -13,7 +13,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class LoginFormController implements RequestHandlerInterface
 {
-  use HtmlRendererTrait;
+  // use HtmlRendererTrait;
 
   public function __construct(private Engine $templates)
   {
