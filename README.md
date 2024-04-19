@@ -8,6 +8,7 @@ Projeto do curso "PHP na Web: aplicando boas práticas e PSRs" da Alura
 
 ## Comandos
 
+composer dumpautoload
+composer install
 php -S localhost:8080
 php -S localhost:8080 -t public/
-composer dumpautoload
