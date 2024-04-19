@@ -21,8 +21,7 @@ class DeleteVideoController implements RequestHandlerInterface
 
   public function handle(ServerRequestInterface $request): ResponseInterface
   {
-    $queryParams = $request->getQueryParams();
-    $id = filter_var($queryParams['id'], FILTER_VALIDATE_INT);
+    $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
     if ($id === null || $id === false) {
       $this->addErrorMessage('ID inválido');
       return new Response(302, [
