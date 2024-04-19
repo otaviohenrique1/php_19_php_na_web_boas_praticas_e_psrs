@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "psr/http-message": "^2.0"
+        "psr/http-message": "^2.0",
+        "nyholm/psr7": "^1.8"
     },
     "scripts": {
         "autoloaddump": "composer dumpautoload",

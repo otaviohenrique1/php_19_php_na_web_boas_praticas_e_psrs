@@ -11,6 +11,10 @@ class ComposerStaticInit3e765baba5a98e532b02430fbe250164
         array (
             'Psr\\Http\\Message\\' => 17,
         ),
+        'N' => 
+        array (
+            'Nyholm\\Psr7\\' => 12,
+        ),
         'A' => 
         array (
             'Alura\\Mvc\\' => 10,
@@ -21,6 +25,11 @@ class ComposerStaticInit3e765baba5a98e532b02430fbe250164
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+        ),
+        'Nyholm\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nyholm/psr7/src',
         ),
         'Alura\\Mvc\\' => 
         array (
